@@ -1,0 +1,48 @@
+{
+    "name": "dannymeyer/sharebox-base",
+    "license": "MIT",
+    "type": "library",
+    "description": "DI helper",
+    "authors": [
+        {
+            "name": "Danny Meyer",
+            "email": "danny.meyer@ravenc.de",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DannyMeyer\\ShareBox\\Base\\": "Src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "Test/"
+        ],
+        "files": [
+            "Config/service.php"
+        ],
+        "psr-4": {
+            "DannyMeyer\\ShareBox\\Base\\Config\\": "Config/"
+        }
+    },
+    "require": {
+        "php": "^7.4",
+        "dannymeyer/laminas-di-helper": "^1.0",
+        "robmorgan/phinx": "~0.12.0",
+        "ext-pdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "symplify/easy-coding-standard": "^7.1"
+    },
+    "scripts": {
+        "check-codestyle": [
+            "cd vendor/bin && ecs check ../../src --set psr12",
+            "cd vendor/bin && ecs check ../../test --set psr12"
+        ],
+        "check-tests": [
+            "cd vendor/bin && phpunit -c ../../config/phpunit.xml"
+        ]
+    }
+}

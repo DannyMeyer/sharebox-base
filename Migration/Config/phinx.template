@@ -1,0 +1,19 @@
+<?php
+    /** @noinspection AutoloadingIssuesInspection */
+    /** @noinspection PhpUnused */
+    declare(strict_types=1);
+
+    use $useClassName;
+
+    class $className extends $baseClassName
+    {
+        public function up(): void
+        {
+
+        }
+
+        public function down(): void
+        {
+
+        }
+    }
